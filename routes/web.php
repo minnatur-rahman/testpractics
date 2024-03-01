@@ -21,10 +21,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
+// Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+//     $request->fulfill();
 
-    return redirect('/home');
-})->middleware(['auth', 'signed'])->name('verification.verify');
+//     return redirect('/home');
+// })->middleware(['auth', 'signed'])->name('verification.verify');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
